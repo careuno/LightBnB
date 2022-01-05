@@ -81,3 +81,6 @@ VALUES
 (4, 2, 7, 5, 'messages'),
 (4, 3, 4, 4, 'messages'),
 (5, 6, 3, 5, 'messages');
+
+INSERT INTO property_reviews (guest_id, property_id, reservation_id, rating, message) 
+VALUES (831, 195, 1011943, 3, 'Mu ozconas cuusoese kifefake cevletal gi fafsisar neza pafvum fepuje felsi tevcu nonu fa nod vukpoaj raw.');
