@@ -2,7 +2,6 @@ $(() => {
   window.propertyListing = {};
   
   function createListing(property, isReservation) {
-    console.log(property)
     return `
     <article class="property-listing">
         <section class="property-listing__preview-image">
@@ -23,7 +22,6 @@ $(() => {
             <div class="property-listing__price">$${property.cost_per_night/100.0}/night</div>
           </footer>
         </section>
-        ${property.average_rating}
       </article>
     `
   }
