@@ -94,8 +94,6 @@ const addUser =  function(user) {
     console.log(err.message);
   });
 
-
-
 }
 exports.addUser = addUser;
 
@@ -107,13 +105,24 @@ exports.addUser = addUser;
  * @return {Promise<[{}]>} A promise to the reservations.
  */
 const getAllReservations = function(guest_id, limit = 10) {
-  
-  return pool
-  .query(`SELECT * FROM reservations WHERE guest_id = $1`, [guest_id])
-  .then((result) => result.rows[0])
+  return pool.query(`SELECT reservations.*, properties.*, AVG(property_reviews.rating) AS average_rating
+  FROM reservations 
+  JOIN properties ON properties.id = reservations.property_id 
+  JOIN property_reviews ON property_reviews.property_id = properties.id
+  WHERE reservations.guest_id = $1
+  GROUP BY properties.id, reservations.id, property_reviews.rating`, [guest_id])
+
+  .then((result) => result.rows)
   .catch((err) => {
     console.log(err.message);
   });
+  
+  // return pool
+  // .query(`SELECT * FROM reservations WHERE guest_id = $1`, [guest_id])
+  // .then((result) => result.rows)
+  // .catch((err) => {
+  //   console.log(err.message);
+  // });
 
   //---- return records of reservations related to that specific user
   
@@ -149,11 +158,13 @@ exports.getAllReservations = getAllReservations;
  * @return {Promise<[{}]>}  A promise to the properties.
  */
 
-
+//city, minimum cost, maximum cost, minimum rating
 
 const getAllProperties = (options, limit = 10) => {
   return pool
-    .query(`SELECT * FROM properties LIMIT $1`, [limit])
+    .query(`SELECT * 
+            FROM properties  
+            LIMIT $1`, [limit])
     .then((result) => result.rows)
     .catch((err) => {
       console.log(err.message);
