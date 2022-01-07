@@ -15,6 +15,14 @@ CREATE TABLE users (
   password VARCHAR(255) NOT NULL
 );
 
+-- Used this to set default password instead of entering it in manually for my INSERT QUERIES, YOU WOULD NEED TO RUN THIS CODE ON THE DATABASE AGAIN IF YOU WANT TO DROP and \i migrations & \i seeds, otherwise you will get an error since password constraint is NOT NULL
+
+-- ALTER TABLE users
+-- ALTER COLUMN password 
+-- SET DEFAULT '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.';
+
+
+
 CREATE TABLE properties (
   id SERIAL PRIMARY KEY NOT NULL,
   owner_id INTEGER REFERENCES users(id) ON DELETE CASCADE,

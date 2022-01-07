@@ -9,6 +9,7 @@ VALUES ('Eva Stanley', 'sebastianguerra@ymail.com'),
 ('Leroy Hart', 'jaycereynolds@inbox.com');
 
 
+-- Used this to set default password instead of entering it in manually for my INSERT QUERIES, YOU WOULD NEED TO RUN THIS CODE ON THE DATABASE AGAIN IF YOU WANT TO DROP and \i migrations & \i seeds, otherwise you will get an error since password constraint is NOT NULL
 
 -- ALTER TABLE users
 -- ALTER COLUMN password 
