@@ -48,7 +48,7 @@ VALUES
 (5, 'Port out', 'description', 'https://images.pexels.com/photos/1475938/pexels-photo-1475938.jpeg?auto=compress&cs=tinysrgb&h=350', 'https://images.pexels.com/photos/1475938/pexels-photo-1475938.jpeg', 530, 3, 1, 2, 'Canada', '169 Nuwug Circle', 'Upetafpuv', 'Nova Scotia', '81059', true), 
 (6, 'Fun glad', 'description', 'https://images.pexels.com/photos/1172064/pexels-photo-1172064.jpeg?auto=compress&cs=tinysrgb&h=350', 'https://images.pexels.com/photos/1172064/pexels-photo-1172064.jpeg', 250, 1, 1, 1, 'Canada', '340 Dokto Park', 'Vutgapha', 'Newfoundland And Labrador', '00159', true), 
 (7, 'Shine twenty', 'description', 'https://images.pexels.com/photos/2076739/pexels-photo-2076739.jpeg?auto=compress&cs=tinysrgb&h=350', 'https://images.pexels.com/photos/2076739/pexels-photo-2076739.jpeg', 460, 2, 1, 2, 'Canada', '834 Buwmi Road', 'Upfufa', 'Quebec', '29045', true), 
-(8, 'Game fill', 'description', 'https://images.pexels.com/photos/1756826/pexels-photo-1756826.jpeg?auto=compress&cs=tinysrgb&h=350', 'https://images.pexels.com/photos/1756826/pexels-photo-1756826.jpeg', 730, 3, 1, 3, 'Canada', '651 Nami Road', 'Rotunif ', 'Ontario', '58224', true); 
+(8, 'Game fill', 'description', 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80', 'https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80', 730, 3, 1, 3, 'Canada', '651 Nami Road', 'Rotunif ', 'Ontario', '58224', true); 
 
 
 -- CREATE TABLE reservations (
